@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- sRGB conversions of the v0 design tokens (shadcn neutral, dark). -->
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="background">#0A0A0A</color>
+    <color name="foreground">#FAFAFA</color>
+    <color name="card">#171717</color>
+    <color name="primary">#E5E5E5</color>
+    <color name="primary_foreground">#171717</color>
+    <color name="secondary">#262626</color>
+    <color name="secondary_pressed">#CC262626</color>
+    <color name="muted_foreground">#A1A1A1</color>
+    <color name="muted_30">#4D262626</color>
+    <color name="muted_40">#66262626</color>
+    <color name="muted_50">#80262626</color>
+    <color name="background_40">#660A0A0A</color>
+    <color name="border">#1AFFFFFF</color>
+    <color name="input">#26FFFFFF</color>
+    <color name="input_30">#0BFFFFFF</color>
+    <color name="input_50">#13FFFFFF</color>
+    <color name="input_80">#1FFFFFFF</color>
+    <color name="attacker">#F1383E</color>
+    <color name="attacker_deep">#940015</color>
+    <color name="attacker_30">#4DF1383E</color>
+    <color name="attacker_40">#66F1383E</color>
+    <color name="defender">#1D84F5</color>
+    <color name="defender_deep">#03409C</color>
+    <color name="defender_30">#4D1D84F5</color>
+    <color name="defender_40">#661D84F5</color>
 </resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Losses in battle-log.tsx: "-a / -d" over "attackers : defenders". -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/losses"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:divider="@drawable/gap_2"
+    android:gravity="end"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <com.example.riskdicesimulator.CssTextView
+        android:id="@+id/lossText"
+        style="@style/Text.Xs.Mono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.example.riskdicesimulator.CssTextView
+        android:id="@+id/afterText"
+        style="@style/Text.Xs.Mono.Muted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

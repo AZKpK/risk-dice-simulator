@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tailwind size-16 / size-2.5; the sm: breakpoint (640px) uses size-18 / size-3. -->
+    <dimen name="die_size">64dp</dimen>
+    <dimen name="pip_size">10dp</dimen>
+</resources>

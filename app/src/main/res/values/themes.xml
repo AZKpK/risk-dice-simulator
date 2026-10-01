@@ -1,9 +1,126 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.RiskDiceSimulator" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- The v0 preview is always dark (html.dark, color-scheme: dark). -->
+    <style name="Base.Theme.RiskDiceSimulator" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/primary_foreground</item>
+        <item name="colorSurface">@color/card</item>
+        <item name="colorOnSurface">@color/foreground</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColorHighlight">#4D737373</item>
+    </style>
+    <style name="Theme.RiskDiceSimulator" parent="Base.Theme.RiskDiceSimulator" />
+
+    <!-- Tailwind type scale: font size / line height. -->
+    <style name="Text">
+        <item name="android:fontFamily">@font/geist_regular</item>
+        <item name="android:textColor">@color/foreground</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cssLineHeight">20dp</item>
+    </style>
+    <style name="Text.Xs">
+        <item name="android:textSize">12sp</item>
+        <item name="cssLineHeight">16dp</item>
+    </style>
+    <style name="Text.Xs.Muted">
+        <item name="android:textColor">@color/muted_foreground</item>
+    </style>
+    <style name="Text.Xs.Mono">
+        <item name="android:fontFamily">@font/geist_mono_regular</item>
+    </style>
+    <style name="Text.Xs.Mono.Muted">
+        <item name="android:textColor">@color/muted_foreground</item>
+    </style>
+    <style name="Text.Sm" />
+    <style name="Text.Sm.Muted">
+        <item name="android:textColor">@color/muted_foreground</item>
+    </style>
+    <style name="Text.Sm.Semibold">
+        <item name="android:fontFamily">@font/geist_semibold</item>
+    </style>
+    <style name="Text.Sm.Medium">
+        <item name="android:fontFamily">@font/geist_medium</item>
+    </style>
+    <style name="Text.Base">
+        <item name="android:textSize">16sp</item>
+        <item name="cssLineHeight">24dp</item>
+    </style>
+    <style name="Text.Base.MonoSemibold">
+        <item name="android:fontFamily">@font/geist_mono_semibold</item>
+    </style>
+    <style name="Text.Lg.MonoSemibold" parent="Text">
+        <item name="android:fontFamily">@font/geist_mono_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="cssLineHeight">28dp</item>
+    </style>
+    <style name="Text.Xl.Semibold" parent="Text">
+        <item name="android:fontFamily">@font/geist_semibold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="cssLineHeight">28dp</item>
+        <item name="android:letterSpacing">-0.025</item>
+    </style>
+    <style name="Text.Xl3.MonoSemibold" parent="Text">
+        <item name="android:fontFamily">@font/geist_mono_semibold</item>
+        <item name="android:textSize">30sp</item>
+        <item name="cssLineHeight">36dp</item>
+    </style>
+    <style name="Text.Xl4.MonoSemibold" parent="Text">
+        <item name="android:fontFamily">@font/geist_mono_semibold</item>
+        <item name="android:textSize">36sp</item>
+        <item name="cssLineHeight">40dp</item>
     </style>
 
-    <style name="Theme.RiskDiceSimulator" parent="Base.Theme.RiskDiceSimulator" />
+    <!-- shadcn base-nova Button. -->
+    <style name="Risk.Button" parent="">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <!-- Horizontal padding includes the 1px (transparent) button border. -->
+    <style name="Risk.Button.Sm">
+        <item name="android:layout_height">28dp</item>
+        <item name="android:paddingStart">11dp</item>
+        <item name="android:paddingEnd">11dp</item>
+    </style>
+    <!-- Grid steppers: no padding so "+10" overflows its padding centered, like whitespace-nowrap. -->
+    <style name="Risk.Button.Sm.Secondary">
+        <item name="android:background">@drawable/btn_secondary_sm</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+    <style name="Risk.Button.Sm.Outline">
+        <item name="android:background">@drawable/btn_outline_sm</item>
+        <item name="android:paddingStart">7dp</item>
+    </style>
+    <style name="Risk.Button.Sm.Ghost">
+        <item name="android:background">@drawable/btn_ghost_sm</item>
+        <item name="android:paddingStart">7dp</item>
+    </style>
+    <style name="Risk.Button.Lg">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:paddingStart">9dp</item>
+        <item name="android:paddingEnd">11dp</item>
+    </style>
+    <style name="Risk.Button.Lg.Primary">
+        <item name="android:background">@drawable/btn_primary</item>
+    </style>
+    <style name="Risk.Button.Lg.Secondary">
+        <item name="android:background">@drawable/btn_secondary</item>
+    </style>
+    <style name="Risk.ButtonText.Sm" parent="Text">
+        <item name="android:fontFamily">@font/geist_medium</item>
+        <item name="android:textSize">12.8sp</item>
+        <item name="cssLineHeight">16dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="Risk.ButtonText.Lg" parent="Text.Base">
+        <item name="android:fontFamily">@font/geist_medium</item>
+        <item name="android:maxLines">1</item>
+    </style>
 </resources>

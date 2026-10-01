@@ -14,3 +14,9 @@
 .cxx
 local.properties
 .idea
+# Signing keys
+*.jks
+*.keystore
+
+# Windows/WSL download metadata
+*:Zone.Identifier

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/gap_4"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.example.riskdicesimulator.CssTextView
+            android:id="@+id/outcomeText"
+            style="@style/Text.Sm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.example.riskdicesimulator.CssTextView
+            android:id="@+id/outcomePercent"
+            style="@style/Text.Sm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/geist_mono_regular" />
+    </LinearLayout>
+
+    <com.example.riskdicesimulator.BarView
+        android:id="@+id/outcomeBar"
+        android:layout_width="match_parent"
+        android:layout_height="6dp" />
+</LinearLayout>

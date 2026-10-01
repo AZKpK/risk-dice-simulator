@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CssText">
+        <!-- CSS line-height: every line box gets exactly this height, text centered in it. -->
+        <attr name="cssLineHeight" format="dimension" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LogItem in battle-log.tsx (roll, roll all, and new-battle rows). -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="8dp"
+    android:paddingTop="8dp"
+    android:paddingEnd="8dp"
+    android:paddingBottom="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.example.riskdicesimulator.CssTextView
+            android:id="@+id/number"
+            style="@style/Text.Xs.Mono.Muted"
+            android:layout_width="28dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:divider="@drawable/gap_4"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <com.example.riskdicesimulator.CssTextView
+                android:id="@+id/setupText"
+                style="@style/Text.Xs.Muted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.example.riskdicesimulator.DiceStackView
+                android:id="@+id/dice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/blitzToggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.example.riskdicesimulator.CssTextView
+                    android:id="@+id/blitzLabel"
+                    style="@style/Text.Xs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/geist_medium" />
+
+                <ImageView
+                    android:id="@+id/blitzChevron"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="4dp"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_chevron_down"
+                    app:tint="@color/muted_foreground" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/resultLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/gap_8"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+                <com.example.riskdicesimulator.CssTextView
+                    android:id="@+id/result"
+                    style="@style/Text.Xs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/geist_medium" />
+
+                <com.example.riskdicesimulator.CssTextView
+                    android:id="@+id/capitalTag"
+                    style="@style/Text.Xs.Muted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/capital" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/view_losses" />
+    </LinearLayout>
+</LinearLayout>
